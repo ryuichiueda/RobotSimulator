@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat $1				|
+awk '$1=="STEP"{file = "./" sprintf("%04d",$2) $3}$1!="STEP"{print > file}'
